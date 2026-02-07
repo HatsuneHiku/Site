@@ -7,466 +7,183 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
-}
-
-/* Theme Switcher */
-body.dark-theme {
+    position: relative;
+    overflow-x: hidden;
     background-color: #36393f;
     color: #dbdee1;
 }
 
-body.dark-theme .banner {
-    background: linear-gradient(135deg, rgb(0, 84, 95) 0%, rgb(0, 120, 135) 100%);
-}
-
-body.dark-theme .profile-section {
-    background-color: #2f3136;
-}
-
-body.dark-theme .avatar img {
-    border-color: #2f3136;
-}
-
-body.dark-theme .username {
-    color: #ffffff;
-}
-
-body.dark-theme .status {
-    color: #72767d;
-}
-
-body.dark-theme .status.online {
-    color: #43b581;
-}
-
-body.dark-theme .status.idle {
-    color: #ffd35b;
-}
-
-body.dark-theme .card {
-    background-color: #2f3136;
-    border-left-color: rgb(0, 120, 135);
-}
-
-body.dark-theme .card h2 {
-    color: #ffffff;
-}
-
-body.dark-theme .card p {
-    color: #b9bbbe;
-}
-
-body.dark-theme .tag {
-    background-color: rgb(0, 84, 95);
-    color: #ffffff;
-}
-
-body.dark-theme .tag:hover {
-    background-color: rgb(0, 120, 135);
-}
-
-body.dark-theme .hobby-list li {
-    color: #b9bbbe;
-    border-bottom-color: #202225;
-}
-
-body.dark-theme .game-item {
-    background-color: #36393f;
-    border-color: #202225;
-    color: #b9bbbe;
-}
-
-body.dark-theme .game-item:hover {
-    background-color: rgb(0, 84, 95);
-    border-color: rgb(0, 120, 135);
-    color: #ffffff;
-}
-
-body.dark-theme .status-box {
-    background-color: #36393f;
-    border-left-color: rgb(0, 120, 135);
-}
-
-body.dark-theme .status-label {
-    color: #72767d;
-}
-
-body.dark-theme .status-value {
-    color: #ffffff;
-}
-
-body.dark-theme .genre-tag {
-    background-color: #484f58;
-    color: #b9bbbe;
-}
-
-body.dark-theme .genre-tag:hover {
-    background-color: rgb(0, 84, 95);
-    color: #ffffff;
-}
-
-body.dark-theme .social-link {
-    background-color: #36393f;
-    border-color: #202225;
-    color: #b9bbbe;
-}
-
-body.dark-theme .social-link:hover {
-    border-color: rgb(0, 120, 135);
-    color: #ffffff;
-    background-color: rgb(0, 84, 95);
-}
-
-body.dark-theme .watch-item {
-    background-color: #36393f;
-    border-left-color: rgb(0, 120, 135);
-}
-
-body.dark-theme .watch-label {
-    color: #72767d;
-}
-
-body.dark-theme .watch-value {
-    color: #ffffff;
-}
-
-body.dark-theme .theme-select {
-    background-color: #2f3136;
-    color: #dbdee1;
-    border-color: rgb(0, 120, 135);
-}
-
-body.dark-theme .theme-select:hover {
-    background-color: #36393f;
-    border-color: #a2d5dd;
-}
-
-/* ===== LIGHT THEME ===== */
-body.light-theme {
-    background-color: #f5f5f5;
-    color: #333333;
-}
-
-body.light-theme .banner {
-    background: linear-gradient(135deg, #87ceeb 0%, #4a90e2 100%);
-}
-
-body.light-theme .profile-section {
-    background-color: #ffffff;
-    border-bottom: 2px solid #e0e0e0;
-}
-
-body.light-theme .avatar img {
-    border-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-body.light-theme .username {
-    color: #222222;
-}
-
-body.light-theme .status {
-    color: #888888;
-}
-
-body.light-theme .status.online {
-    color: #4caf50;
-}
-
-body.light-theme .status.idle {
-    color: #ff9800;
-}
-
-body.light-theme .card {
-    background-color: #ffffff;
-    border-left-color: #4a90e2;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-body.light-theme .card h2 {
-    color: #222222;
-}
-
-body.light-theme .card p {
-    color: #555555;
-}
-
-body.light-theme .tag {
-    background-color: #e3f2fd;
-    color: #1976d2;
-    border: 1px solid #90caf9;
-}
-
-body.light-theme .tag:hover {
-    background-color: #bbdefb;
-    color: #1565c0;
-}
-
-body.light-theme .hobby-list li {
-    color: #555555;
-    border-bottom-color: #f0f0f0;
-}
-
-body.light-theme .game-item {
-    background-color: #f9f9f9;
-    border-color: #e0e0e0;
-    color: #666666;
-}
-
-body.light-theme .game-item:hover {
-    background-color: #e3f2fd;
-    border-color: #4a90e2;
-    color: #1976d2;
-}
-
-body.light-theme .status-box {
-    background-color: #f9f9f9;
-    border-left-color: #4a90e2;
-}
-
-body.light-theme .status-label {
-    color: #888888;
-}
-
-body.light-theme .status-value {
-    color: #222222;
-}
-
-body.light-theme .genre-tag {
-    background-color: #f0f0f0;
-    color: #555555;
-    border: 1px solid #ddd;
-}
-
-body.light-theme .genre-tag:hover {
-    background-color: #e3f2fd;
-    color: #1976d2;
-}
-
-body.light-theme .social-link {
-    background-color: #f9f9f9;
-    border-color: #e0e0e0;
-    color: #555555;
-}
-
-body.light-theme .social-link:hover {
-    border-color: #4a90e2;
-    color: #1976d2;
-    background-color: #e3f2fd;
-}
-
-body.light-theme .watch-item {
-    background-color: #f9f9f9;
-    border-left-color: #4a90e2;
-}
-
-body.light-theme .watch-label {
-    color: #888888;
-}
-
-body.light-theme .watch-value {
-    color: #222222;
-}
-
-body.light-theme .theme-select {
-    background-color: #ffffff;
-    color: #333333;
-    border-color: #4a90e2;
-}
-
-body.light-theme .theme-select:hover {
-    background-color: #f9f9f9;
-    border-color: #1976d2;
-}
-
-/* ===== VIBRANT THEME ===== */
-body.vibrant-theme {
-    background-color: #0f0f1e;
-    color: #e0e0e0;
-}
-
-body.vibrant-theme .banner {
-    background: linear-gradient(135deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%);
-}
-
-body.vibrant-theme .profile-section {
-    background-color: #1a1a2e;
-    border: 2px solid #8338ec;
-}
-
-body.vibrant-theme .avatar img {
-    border-color: #8338ec;
-    box-shadow: 0 0 20px rgba(131, 56, 236, 0.5);
-}
-
-body.vibrant-theme .username {
-    color: #00f5ff;
-}
-
-body.vibrant-theme .status {
-    color: #a0aec0;
-}
-
-body.vibrant-theme .status.online {
-    color: #00ff00;
-}
-
-body.vibrant-theme .status.idle {
-    color: #ffff00;
-}
-
-body.vibrant-theme .card {
-    background-color: #1a1a2e;
-    border-left-color: #ff006e;
-    box-shadow: 0 0 15px rgba(255, 0, 110, 0.1);
-}
-
-body.vibrant-theme .card h2 {
-    color: #00f5ff;
-}
-
-body.vibrant-theme .card p {
-    color: #b0b0b0;
-}
-
-body.vibrant-theme .tag {
-    background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
-    color: #ffffff;
-    border: 1px solid #00f5ff;
-}
-
-body.vibrant-theme .tag:hover {
-    background: linear-gradient(135deg, #ff1493 0%, #a855f7 100%);
-    box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
-}
-
-body.vibrant-theme .hobby-list li {
-    color: #b0b0b0;
-    border-bottom-color: #333344;
-}
-
-body.vibrant-theme .game-item {
-    background-color: #0f0f1e;
-    border: 2px solid #3a86ff;
-    color: #a0aec0;
-}
-
-body.vibrant-theme .game-item:hover {
-    background-color: #1a1a2e;
-    border-color: #00f5ff;
-    color: #00f5ff;
-    box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
-}
-
-body.vibrant-theme .status-box {
-    background-color: #0f0f1e;
-    border-left: 3px solid #ff006e;
-    border-radius: 6px;
-}
-
-body.vibrant-theme .status-label {
-    color: #a0aec0;
-}
-
-body.vibrant-theme .status-value {
-    color: #00f5ff;
-}
-
-body.vibrant-theme .genre-tag {
-    background-color: #0f0f1e;
-    color: #00f5ff;
-    border: 1px solid #8338ec;
-}
-
-body.vibrant-theme .genre-tag:hover {
-    background-color: #1a1a2e;
-    color: #ffff00;
-    border-color: #ffff00;
-    box-shadow: 0 0 8px rgba(255, 255, 0, 0.3);
-}
-
-body.vibrant-theme .social-link {
-    background-color: #0f0f1e;
-    border: 2px solid #3a86ff;
-    color: #a0aec0;
-}
-
-body.vibrant-theme .social-link:hover {
-    border-color: #00f5ff;
-    color: #00f5ff;
-    background-color: #1a1a2e;
-    box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
-}
-
-body.vibrant-theme .watch-item {
-    background-color: #0f0f1e;
-    border-left: 3px solid #ff006e;
-}
-
-body.vibrant-theme .watch-label {
-    color: #a0aec0;
-}
-
-body.vibrant-theme .watch-value {
-    color: #00f5ff;
-}
-
-body.vibrant-theme .theme-select {
-    background-color: #1a1a2e;
-    color: #00f5ff;
-    border: 2px solid #8338ec;
-}
-
-body.vibrant-theme .theme-select:hover {
-    background-color: #0f0f1e;
-    border-color: #00f5ff;
-    box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
-}
-
-/* Theme Switcher */
-.theme-switcher {
+/* Vertex Canvas */
+#vertex-canvas {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
-}
-
-.theme-select {
-    background-color: #2f3136;
-    color: #dbdee1;
-    border: 1px solid rgb(0, 120, 135);
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.theme-select:hover {
-    background-color: #36393f;
-    border-color: #a2d5dd;
-}
-
-.theme-select:focus {
-    outline: none;
-    border-color: #a2d5dd;
-    box-shadow: 0 0 5px rgba(162, 213, 221, 0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .container {
+    position: relative;
+    z-index: 1;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Banner */
-.banner {
-    height: 150px;
-    background: linear-gradient(135deg, rgb(0, 84, 95) 0%, rgb(0, 120, 135) 100%);
-    border-radius: 8px 8px 0 0;
-    margin-bottom: -60px;
+/* Navigation Tabs */
+.nav-tabs {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    display: flex;
+    background-color: #2f3136;
+    border-bottom: 2px solid rgb(0, 120, 135);
+    padding: 0;
+    margin: 0;
+}
+
+.nav-tab {
+    flex: 1;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #b9bbbe;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-tab:hover {
+    color: #ffffff;
+    background-color: #36393f;
+}
+
+.nav-tab.active {
+    color: #ffffff;
+    border-bottom-color: rgb(0, 120, 135);
+    background-color: #36393f;
+}
+
+.banner {
+    background: linear-gradient(135deg, rgb(0, 84, 95) 0%, rgb(0, 120, 135) 100%);
+}
+
+.profile-section {
+    background-color: #2f3136;
+}
+
+.avatar img {
+    border-color: #2f3136;
+}
+
+.username {
+    color: #ffffff;
+}
+
+.status {
+    color: #72767d;
+}
+
+.status.online {
+    color: #43b581;
+}
+
+.status.idle {
+    color: #ffd35b;
+}
+
+.card {
+    background-color: #2f3136;
+    border-left-color: rgb(0, 120, 135);
+}
+
+.card h2 {
+    color: #ffffff;
+}
+
+.card p {
+    color: #b9bbbe;
+}
+
+.tag {
+    background-color: rgb(0, 84, 95);
+    color: #ffffff;
+}
+
+.tag:hover {
+    background-color: rgb(0, 120, 135);
+}
+
+.hobby-list li {
+    color: #b9bbbe;
+    border-bottom-color: #202225;
+}
+
+.game-item {
+    background-color: #36393f;
+    border-color: #202225;
+    color: #b9bbbe;
+}
+
+.game-item:hover {
+    background-color: rgb(0, 84, 95);
+    border-color: rgb(0, 120, 135);
+    color: #ffffff;
+}
+
+.status-box {
+    background-color: #36393f;
+    border-left-color: rgb(0, 120, 135);
+}
+
+.status-label {
+    color: #72767d;
+}
+
+.status-value {
+    color: #ffffff;
+}
+
+.genre-tag {
+    background-color: #484f58;
+    color: #b9bbbe;
+}
+
+.genre-tag:hover {
+    background-color: rgb(0, 84, 95);
+    color: #ffffff;
+}
+
+.social-link {
+    background-color: #36393f;
+    border-color: #202225;
+    color: #b9bbbe;
+}
+
+.social-link:hover {
+    border-color: rgb(0, 120, 135);
+    color: #ffffff;
+    background-color: rgb(0, 84, 95);
+}
+
+.watch-item {
+    background-color: #36393f;
+    border-left-color: rgb(0, 120, 135);
+}
+
+.watch-label {
+    color: #72767d;
+}
+
+.watch-value {
+    color: #ffffff;
+}
+
+/* ===== REST OF STYLES ===== */
+
+body.vibrant-theme .banner {
+    background: linear-gradient(135deg, rgb(0, 84, 95) 0%, rgb(0, 120, 135) 100%);
 }
 
 /* Profile Section */
