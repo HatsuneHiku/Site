@@ -122,7 +122,14 @@ class VertexBackground {
     }
 }
 
-const vertexBg = new VertexBackground();
+const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+           window.innerWidth <= 768;
+};
+
+if (!isMobile()) {
+    const vertexBg = new VertexBackground();
+}
 
 document.querySelectorAll('.tag, .genre-tag, .game-item, .social-link').forEach(element => {
     element.addEventListener('mouseenter', function() {

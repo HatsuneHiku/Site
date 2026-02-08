@@ -23,6 +23,12 @@ body {
     pointer-events: none;
 }
 
+@media (max-width: 768px) {
+    #vertex-canvas {
+        display: none;
+    }
+}
+
 .container {
     position: relative;
     z-index: 1;
