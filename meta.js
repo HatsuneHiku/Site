@@ -1,6 +1,3 @@
-// Dynamic Meta Tag Manager
-// Updates Open Graph and Twitter Card meta tags with current status and activity
-
 class MetaManager {
     constructor() {
         this.statusEmojis = {
@@ -21,13 +18,10 @@ class MetaManager {
     updateMetaTags() {
         const description = this.buildDescription();
         
-        // Update Open Graph tags
         this.setMetaTag('property', 'og:description', description);
         
-        // Update Twitter Card tags
         this.setMetaTag('name', 'twitter:description', description);
         
-        // Update main description
         this.setMetaTag('name', 'description', `HatsuneHiku's profile - ${description}`);
     }
     
@@ -88,7 +82,6 @@ class MetaManager {
     }
     
     setupStatusToggle() {
-        // Create a simple status widget if not already present
         const existingWidget = document.getElementById('status-widget');
         if (existingWidget) return;
         
@@ -146,7 +139,6 @@ class MetaManager {
     }
 }
 
-// Initialize on page load
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         window.metaManager = new MetaManager();

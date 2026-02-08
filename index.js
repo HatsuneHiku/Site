@@ -1,4 +1,3 @@
-// Vertex Background Animation
 class VertexBackground {
     constructor() {
         this.canvas = document.getElementById('vertex-canvas');
@@ -43,19 +42,15 @@ class VertexBackground {
     
     update() {
         for (let particle of this.particles) {
-            // Move particle
             particle.x += particle.vx;
             particle.y += particle.vy;
             
-            // Bounce off walls
             if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
             if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
             
-            // Keep in bounds
             particle.x = Math.max(0, Math.min(this.canvas.width, particle.x));
             particle.y = Math.max(0, Math.min(this.canvas.height, particle.y));
             
-            // Repel from other particles to prevent clustering
             for (let other of this.particles) {
                 if (other === particle) continue;
                 const dx = particle.x - other.x;
@@ -72,14 +67,11 @@ class VertexBackground {
     }
     
     draw() {
-        // Clear canvas completely (no trails)
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
-        // Draw particles and connections
         for (let i = 0; i < this.particles.length; i++) {
             const particle = this.particles[i];
             
-            // Draw lines between nearby particles
             for (let j = i + 1; j < this.particles.length; j++) {
                 const other = this.particles[j];
                 const dx = particle.x - other.x;
@@ -97,7 +89,6 @@ class VertexBackground {
                 }
             }
             
-            // Draw triangles at particle positions
             this.drawTriangle(particle);
         }
     }
@@ -131,10 +122,8 @@ class VertexBackground {
     }
 }
 
-// Initialize vertex background
 const vertexBg = new VertexBackground();
 
-// Add interactive hover effects
 document.querySelectorAll('.tag, .genre-tag, .game-item, .social-link').forEach(element => {
     element.addEventListener('mouseenter', function() {
         this.style.transform = 'scale(1.05)';
@@ -144,19 +133,16 @@ document.querySelectorAll('.tag, .genre-tag, .game-item, .social-link').forEach(
     });
 });
 
-// Status update animation
 const statusBoxes = document.querySelectorAll('.status-box');
 statusBoxes.forEach((box, index) => {
     box.style.animation = `fadeIn 0.5s ease-in-out ${index * 0.1}s`;
 });
 
-// Watch items animation
 const watchItems = document.querySelectorAll('.watch-item');
 watchItems.forEach((item, index) => {
     item.style.animation = `fadeIn 0.5s ease-in-out ${index * 0.1}s`;
 });
 
-// Add fade-in animation
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeIn {
