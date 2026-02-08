@@ -127,9 +127,29 @@ const isMobile = () => {
            window.innerWidth <= 768;
 };
 
-if (!isMobile()) {
-    const vertexBg = new VertexBackground();
+const isPortrait = () => {
+    return window.innerHeight > window.innerWidth;
+};
+
+const shouldShowVertexBg = () => {
+    return !(isMobile() && isPortrait());
+};
+
+let vertexBg = null;
+
+if (shouldShowVertexBg()) {
+    vertexBg = new VertexBackground();
 }
+
+window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+        if (!shouldShowVertexBg() && vertexBg) {
+            vertexBg = null;
+        } else if (shouldShowVertexBg() && !vertexBg) {
+            vertexBg = new VertexBackground();
+        }
+    }, 100);
+});
 
 document.querySelectorAll('.tag, .genre-tag, .game-item, .social-link').forEach(element => {
     element.addEventListener('mouseenter', function() {
